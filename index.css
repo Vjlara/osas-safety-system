@@ -1,0 +1,142 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #edeffe, #f0f9ff); /* light gradient */
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #6a5acd, #1e3a8a); /* logo colors */
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.sidebar p {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #e0e7ff;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: #e0e7ff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #ffd700; /* gold highlight */
+  color: #1e3a8a;      /* deep blue text */
+  font-weight: 600;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 240px; /* pushes content right */
+  padding: 20px;
+  width: calc(100% - 240px);
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #1a237e; /* deep indigo */
+}
+
+/* Stats Cards */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 5px solid #6a5acd; /* purple accent border */
+}
+
+.stat-card h3 {
+  color: #1e3a8a;
+}
+
+.stat-card span {
+  color: #ffd700; /* gold numbers */
+  font-weight: bold;
+}
+
+/* Section Titles */
+.recent-activities,
+.upcoming-events {
+  margin: 10px 0 20px 0;
+  padding-left: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Supplies Table */
+.supplies-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.supplies-table th {
+  background: linear-gradient(90deg, #6a5acd, #1e3a8a); /* logo gradient */
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.supplies-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.low {
+  color: red;
+  font-weight: bold;
+}
+.ok {
+  color: green;
+  font-weight: bold;
+}
