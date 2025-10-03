@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require_once "db_connect.php";
@@ -18,34 +19,34 @@ function getCount($conn, $table) {
     return $res ? $res->fetch_assoc()['c'] : 0;
 }
 
-// Counts for dashboard cards
+// Counts for dashboard cards (make sure table names match your DB schema)
 $counts = [
     'Contacts'          => getCount($conn,'contacts'),
     'Drills'            => getCount($conn,'drills'),
     'Evacuation Plans'  => getCount($conn,'evacuation_plans'),
     'Incidents'         => getCount($conn,'incidents'),
-    'Safety_checklist'  => getCount($conn,'safety_checklist'),
+    'Safety Checklist'  => getCount($conn,'safety_checklist'),
     'Risk'             => getCount($conn,'risk'),
     'Notifications'     => getCount($conn,'notifications'),
-    'compliance'           => getCount($conn,'compliance_reports'),
+    'Compliance'        => getCount($conn,'compliance_reports'),
     'Roles'             => getCount($conn,'roles'),
-    'First Aid'         => getCount($conn,'first_aid_supplies'),
+    'Supplies'          => getCount($conn,'first_aid_supplies'),
     'Inspections'       => getCount($conn,'inspections'),
 ];
 
 // Map modules to files
 $moduleFiles = [
-    'contacts'           => 'contacts.php',
-    'drills'             => 'drills.php',
-    'evacuation_plans'   => 'evacuation_plans.php',
-    'incidents'          => 'incidents.php',
-    'safety_checklist'    => 'safety_checklist.php',
-    'risk'               => 'risk.php',
-    'notify'             => 'notifications.php',
-    'compliance'            => 'compliance.php',
-    'roles'              => 'roles.php',
-    'firstaid'           => 'first_aid.php',
-    'inspections'        => 'inspections.php',
+    'contacts'         => 'contacts.php',
+    'drills'           => 'drills.php',
+    'evacuation_plans' => 'evacuation_plans.php',
+    'incidents'        => 'incidents.php',
+    'safety_checklist' => 'safety_checklist.php',
+    'risk'            => 'risk.php',
+    'notify'           => 'notifications.php',
+    'compliance'       => 'compliance.php',
+    'roles'            => 'roles.php',
+    'supplies'         => 'supplies.php',
+    'inspections'      => 'inspections.php',
 ];
 ?>
 <!DOCTYPE html>
@@ -103,7 +104,7 @@ body { margin:0; background:#f3f4f6; font-family:"Poppins",sans-serif; }
   <a href="?m=notify" class="<?= $module==='notify'?'active':'' ?>"><i class="bi bi-bell"></i> Notifications</a>
   <a href="?m=compliance" class="<?= $module==='compliance'?'active':'' ?>"><i class="bi bi-file-earmark-text"></i> Compliance Reports</a>
   <a href="?m=roles" class="<?= $module==='roles'?'active':'' ?>"><i class="bi bi-people"></i> Emergency Roles</a>
-  <a href="?m=firstaid" class="<?= $module==='firstaid'?'active':'' ?>"><i class="bi bi-heart-pulse"></i> First Aid Supplies</a>
+  <a href="?m=supplies" class="<?= $module==='supplies'?'active':'' ?>"><i class="bi bi-heart-pulse"></i> First Aid Supplies</a>
   <a href="?m=inspections" class="<?= $module==='inspections'?'active':'' ?>"><i class="bi bi-clipboard-check"></i> Inspections</a>
   <hr class="bg-light">
   <a href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
@@ -179,3 +180,4 @@ if ($module==='dashboard') {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
