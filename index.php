@@ -105,7 +105,6 @@ body { margin:0; background:#f3f4f6; font-family:"Poppins",sans-serif; }
   <a href="?m=compliance" class="<?= $module==='compliance'?'active':'' ?>"><i class="bi bi-file-earmark-text"></i> Compliance Reports</a>
   <a href="?m=roles" class="<?= $module==='roles'?'active':'' ?>"><i class="bi bi-people"></i> Emergency Roles</a>
   <a href="?m=supplies" class="<?= $module==='supplies'?'active':'' ?>"><i class="bi bi-heart-pulse"></i> First Aid Supplies</a>
-  <a href="?m=inspections" class="<?= $module==='inspections'?'active':'' ?>"><i class="bi bi-clipboard-check"></i> Inspections</a>
   <hr class="bg-light">
   <a href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
 </div>
@@ -180,4 +179,5 @@ if ($module==='dashboard') {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 
